@@ -1,103 +1,224 @@
-/* Alterado: melhor contraste, fontes mais modernas */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f9;
-  color: #222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
   line-height: 1.6;
 }
 
+/* ===== HEADER ===== */
 header {
-  background-color: #fff;
+  background: #fff;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Alterado: centralizar verticalmente */
-  padding: 20px 50px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header .icon {
+  font-size: 22px;
   font-weight: bold;
-  font-size: 24px;
-  color: #ff6347; /* Alterado: destaque na logo */
+  color: #ff6347;
 }
 
-/* Alterado: hover com sublinhado */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
 nav ul li a:hover {
   color: #ff6347;
-  text-decoration: underline;
 }
 
-/* Alterado: cards de cursos */
+/* ===== SEÇÃO INÍCIO ===== */
+section.inicio {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #ff7a59, #ff6347);
+  color: #fff;
+  text-align: center;
+}
+
+section.inicio h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+section.inicio p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background: #fff;
+  color: #ff6347;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #ffe5df;
+}
+
+/* ===== SEÇÃO CURSOS ===== */
 section.cursos {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 50px;
+  justify-content: center;
+  padding: 60px 20px;
 }
 
 .cursos .card {
-  background-color: #fff;
-  padding: 30px;
-  flex: 1; /* Alterado: responsivo */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #fff;
+  padding: 25px;
+  flex: 1 1 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.cursos .quote {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.cursos .author {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ===== SEÇÃO CONTATO ===== */
+section.contato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.contato-info {
+  flex: 1 1 300px;
+}
+
+.contato-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contato-info a {
+  color: #ff6347;
+  text-decoration: none;
+}
+
+.contato-info a:hover {
+  text-decoration: underline;
+}
+
+.contato-form {
+  flex: 1 1 300px;
 }
 
 .contato-form form input,
 .contato-form form textarea {
-  border-radius: 5px; /* Alterado: bordas arredondadas */
-  border: 1px solid #bbb;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
 }
 
-/* Acessibilidade: classe para labels escondidos */
-.sr-only {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}    margin-top: 20px;
-  }
-  
-  .contato-info {
-    width: 40%;
-  }
-  
-  .contato-info p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .contato-form form {
-    width: 40%;
-  }
-  
-  .contato-form form input,
-  .contato-form form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-  }
-  
-  .contato-form form button {
-    background-color: #ff6347;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  footer {
-    background-color: #fff;
-    padding: 20px 50px;
-    text-align: center;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  footer .footer-content p {
-    font-size: 14px;
-    margin-bottom: 5px;
+.contato-form form button {
+  background: #ff6347;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contato-form form button:hover {
+  background: #e5533a;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .footer-content p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
   }
 
-  
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section.inicio h2 {
+    font-size: 28px;
+  }
+
+  section.inicio p {
+    font-size: 16px;
+  }
+
+  section.cursos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.contato {
+    flex-direction: column;
+    align-items: center;
+  }
+}
