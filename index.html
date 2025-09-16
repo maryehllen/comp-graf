@@ -9,7 +9,8 @@
 <body>
   <header>
     <div class="logo">
-      <span class="icon">Cursos preparatórios</span>
+      <!-- Alterado: usei <h1> para acessibilidade e SEO -->
+      <h1 class="icon">Cursos Preparatórios</h1>
     </div>
     <nav>
       <ul>
@@ -21,36 +22,47 @@
     </nav>
   </header>
 
-  <section class="inicio">
+  <!-- Alterado: adicionei id para navegação funcionar -->
+  <section id="inicio" class="inicio">
     <div class="content">
-      <h1>Tioen bead mentur pelasve yourl course</h1>
-      <p>Were your 'tih is are inak to mosh olacacidt sor tran. Imooy emparrolcent, lessav caganv studerl, ren eprotnentes an our pesper.</p>
-      <button class="cta-button">Overv ithne</button>
-      <button class="cta-button">Tncrem fremerate</button>
+      <!-- Alterado: corrigi o texto placeholder para algo real -->
+      <h2>Aprenda com os melhores professores</h2>
+      <p>Nossos cursos preparatórios foram desenvolvidos para ajudar você a alcançar seus objetivos acadêmicos e profissionais.</p>
+      <button class="cta-button">Ver Cursos</button>
+      <button class="cta-button">Inscreva-se</button>
     </div>
   </section>
 
-  <section class="cursos">
-    <div class="cursos">
-      <p class="quote">"1399 Yline, 3ae. Feeder: lld. Soon rewlver and petuifing the pepperental. It still end natorie lor pahe claming differnces..."</p>
-      <p class="author">- Son Art I. Arms</p>
+  <!-- Alterado: removi duplicação da classe "cursos" e deixei semântica -->
+  <section id="cursos" class="cursos">
+    <div class="card">
+      <p class="quote">"A educação é a arma mais poderosa que você pode usar para mudar o mundo."</p>
+      <p class="author">– Nelson Mandela</p>
     </div>
-    <div class="cursos">
-      <p class="quote">"Resus to uses tipensfall lla to each derpopine goner luogil lilá, peroot decobal enne court."</p>
-      <p class="author">- Son Art II Arms</p>
+    <div class="card">
+      <p class="quote">"O sucesso é a soma de pequenos esforços repetidos dia após dia."</p>
+      <p class="author">– Robert Collier</p>
     </div>
   </section>
 
-  <section class="contato">
+  <section id="contato" class="contato">
     <div class="contato-info">
-      <p>Contact: <span>3456 Ylline, 3ae. Feeder: ll. Consuleemess condaime</span></p>
-      <p>External: <span>Website: Example.com</span></p>
+      <!-- Alterado: corrigi informações falsas e deixei estruturado -->
+      <p><strong>Endereço:</strong> Rua Exemplo, 123 - Curitiba, PR</p>
+      <p><strong>Site:</strong> <a href="https://example.com" target="_blank">example.com</a></p>
     </div>
     <div class="contato-form">
+      <!-- Alterado: adicionei labels escondidos para acessibilidade -->
       <form>
-        <input type="text" name="name" placeholder="Seu nome">
-        <input type="email" name="email" placeholder="Seu email">
-        <textarea name="message" placeholder="Sua mensagem"></textarea>
+        <label for="name" class="sr-only">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+        
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" name="email" placeholder="Seu email" required>
+        
+        <label for="message" class="sr-only">Mensagem</label>
+        <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+        
         <button type="submit">Enviar</button>
       </form>
     </div>
@@ -59,8 +71,8 @@
   <footer>
     <div class="footer-content">
       <p>&copy; 2025 Prepnaved</p>
-      <p>Contact us: carducel@organize.com</p>
-      <p>Phone: (962) 4338521798</p>
+      <p>Email: <a href="mailto:contato@prepnaved.com">contato@prepnaved.com</a></p>
+      <p>Telefone: (41) 99999-9999</p>
     </div>
   </footer>
 
