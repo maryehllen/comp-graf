@@ -5,195 +5,214 @@
   box-sizing: border-box;
 }
 
-/* Estilo global */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f7fa;
+  background: #fff;
   color: #333;
   line-height: 1.6;
 }
 
 /* ===== HEADER ===== */
 header {
-  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 20px 60px;
 }
 
-header .icon {
-  font-size: 22px;
+.logo {
+  font-size: 20px;
   font-weight: bold;
   color: #ff6347;
 }
 
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 25px;
+  align-items: center;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: #ff6347;
 }
 
-/* ===== SEÇÃO INÍCIO ===== */
-section.inicio {
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-  background: linear-gradient(to right, #ff7a59, #ff6347);
-  color: #fff;
-  text-align: center;
+.btn-outline {
+  border: 1px solid #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
-section.inicio h2 {
+.btn-outline:hover {
+  background: #ff6347;
+  color: #fff;
+  border-color: #ff6347;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text .tag {
+  display: inline-block;
+  background: #ffe5df;
+  color: #ff6347;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
   font-size: 36px;
   margin-bottom: 20px;
 }
 
-section.inicio p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-button {
-  background: #fff;
-  color: #ff6347;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
+.hero-text p {
   font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 0 10px;
-  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  color: #555;
 }
 
-.cta-button:hover {
-  background: #ffe5df;
-}
-
-/* ===== SEÇÃO CURSOS ===== */
-section.cursos {
+.buttons {
   display: flex;
-  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: #ff6347;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e5533a;
+}
+
+.btn-secondary {
+  background: #f2f2f2;
+  color: #333;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #ddd;
+}
+
+/* ===== HERO CARDS ===== */
+.hero-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-  justify-content: center;
-  padding: 60px 20px;
 }
 
-.cursos .card {
+.card {
   background: #fff;
-  padding: 25px;
-  flex: 1 1 300px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
 }
 
-.cursos .quote {
-  font-size: 18px;
-  font-style: italic;
+.card img {
+  width: 100%;
+  border-radius: 8px;
   margin-bottom: 15px;
-  color: #444;
 }
 
-.cursos .author {
+.card .quote {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.card .author {
   font-size: 14px;
   color: #777;
 }
 
-/* ===== SEÇÃO CONTATO ===== */
-section.contato {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 60px 20px;
-  background: #fff;
-}
-
-.contato-info {
-  flex: 1 1 300px;
-}
-
-.contato-info p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.contato-info a {
-  color: #ff6347;
-  text-decoration: none;
-}
-
-.contato-info a:hover {
-  text-decoration: underline;
-}
-
-.contato-form {
-  flex: 1 1 300px;
-}
-
-.contato-form form input,
-.contato-form form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
-}
-
-.contato-form form button {
-  background: #ff6347;
-  color: #fff;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contato-form form button:hover {
-  background: #e5533a;
+.card.highlight {
+  background: #fffaef;
 }
 
 /* ===== FOOTER ===== */
 footer {
-  background: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+  background: #f9f9f9;
+  padding: 40px 60px;
+  margin-top: 60px;
 }
 
-footer .footer-content p {
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-grid h4 {
+  margin-bottom: 10px;
+  color: #ff6347;
+}
+
+.footer-grid a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-grid a:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  text-align: center;
   font-size: 14px;
-  margin-bottom: 5px;
+  color: #777;
 }
 
 /* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
   header {
     flex-direction: column;
     gap: 15px;
@@ -204,21 +223,11 @@ footer .footer-content p {
     justify-content: center;
   }
 
-  section.inicio h2 {
+  .hero {
+    padding: 30px;
+  }
+
+  .hero-text h1 {
     font-size: 28px;
-  }
-
-  section.inicio p {
-    font-size: 16px;
-  }
-
-  section.cursos {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  section.contato {
-    flex-direction: column;
-    align-items: center;
   }
 }
