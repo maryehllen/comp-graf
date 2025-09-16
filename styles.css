@@ -1,111 +1,61 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  header {
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  header .logo .icon {
-    font-weight: bold;
-    font-size: 24px;
-  }
+/* Alterado: melhor contraste, fontes mais modernas */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #222;
+  line-height: 1.6;
+}
 
-  nav ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  nav ul li {
-    margin-left: 30px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  
-  section.inicio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    background-color: #fff;
-    margin-top: 20px;
-  }
-  
-  section.inicio .content {
-    text-align: center;
-  }
-  
-  section.inicio h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  section.inicio p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .cta-button {
-    background-color: #ff6347;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  
-  .cta-button:hover {
-    background-color: #e5533a;
-  }
-  
-  section.cursos {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-  }
-  
-  .cursos {
-    background-color: #fff;
-    padding: 30px;
-    width: 40%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cursos .quote {
-    font-size: 18px;
-    font-style: italic;
-  }
-  
-  .cursos .author {
-    font-size: 14px;
-    margin-top: 10px;
-    color: #888;
-  }
-  
-  section.contato {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    background-color: #fff;
-    margin-top: 20px;
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alterado: centralizar verticalmente */
+  padding: 20px 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .icon {
+  font-weight: bold;
+  font-size: 24px;
+  color: #ff6347; /* Alterado: destaque na logo */
+}
+
+/* Alterado: hover com sublinhado */
+nav ul li a:hover {
+  color: #ff6347;
+  text-decoration: underline;
+}
+
+/* Alterado: cards de cursos */
+section.cursos {
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+}
+
+.cursos .card {
+  background-color: #fff;
+  padding: 30px;
+  flex: 1; /* Alterado: responsivo */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contato-form form input,
+.contato-form form textarea {
+  border-radius: 5px; /* Alterado: bordas arredondadas */
+  border: 1px solid #bbb;
+}
+
+/* Acessibilidade: classe para labels escondidos */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}    margin-top: 20px;
   }
   
   .contato-info {
@@ -149,4 +99,5 @@
     font-size: 14px;
     margin-bottom: 5px;
   }
+
   
